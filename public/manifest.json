@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "HelloWorld",
+  "version": "1.0.0",
+  "description": "测试描述",
+  "icons": {
+    "16": "./assets/icon/icon16.png",
+    "48": "./assets/icon/icon48.png",
+    "128": "./assets/icon/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "./assets/icon/icon16.png",
+    "default_popup": "./index.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": 
+	[
+		{
+			"matches": ["<all_urls>"],
+      "css": ["/live2d-widget/waifu.css"],
+			"js": ["/live2d-widget/live2d.min.js", "/live2d-widget/waifu-tips.js","/live2d-widget/init.js"],
+			"run_at": "document_end"
+		}
+	],
+  "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net; object-src 'self'"
+}
