@@ -1,8 +1,8 @@
-import "./App.css";
-import BudgetManager from "./components/BudgetManager";
+import './App.scss';
+
+import BudgetManager from '@/components/BudgetManager';
 
 function App() {
-
   return (
     <div className="App">
       <header className="App-header">

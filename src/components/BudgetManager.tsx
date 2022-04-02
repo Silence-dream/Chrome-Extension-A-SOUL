@@ -1,13 +1,13 @@
-import React, { ChangeEvent, useState, MouseEvent, useRef } from "react";
+import React, { useRef, useState } from 'react';
 
 export default function BudgetManager() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [total, setTotal] = useState(0);
-  chrome.storage.sync.get(["total"], (budget) => {
+  chrome.storage.sync.get(['total'], (budget) => {
     setTotal(budget.total);
-  })
+  });
   function fn() {
-    chrome.storage.sync.get(["total"], function (budget) {
+    chrome.storage.sync.get(['total'], function (budget) {
       let newTotal = 0;
       if (budget.total) {
         newTotal = parseInt(budget.total);
@@ -17,7 +17,7 @@ export default function BudgetManager() {
         newTotal += parseInt(inputRef.current.value);
       }
       chrome.storage.sync.set({ total: newTotal });
-      setTotal(newTotal)
+      setTotal(newTotal);
     });
   }
   return (
