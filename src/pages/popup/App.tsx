@@ -1,14 +1,14 @@
 import './App.scss';
 
-import BudgetManager from '@/components/BudgetManager';
+import { Outlet } from 'react-router-dom';
+
+import HeaderNav from '@/pages/popup/components/HeaderNav/HeaderNav';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>HelloWrol1d</h1>
-        <BudgetManager></BudgetManager>
-      </header>
+      <HeaderNav />
+      <Outlet />
     </div>
   );
 }

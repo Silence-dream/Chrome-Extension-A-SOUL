@@ -1,3 +1,31 @@
 // 初始化样式
 @import './reset.scss';
 $red: rgb(221, 152, 152);
+*{
+  box-sizing: border-box;
+}
+// 根据用户电脑主题设置颜色
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fff;
+    color: #333;
+  }
+  a{
+    color: #333;
+  }
+  a:hover{
+    color: #333
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: #fff;
+  }
+  a{
+    color: #fff;
+  }
+  a:hover{
+    color: #fff;
+  }
+}
