@@ -1,0 +1,32 @@
+// 根据用户电脑主题设置颜色
+@media (prefers-color-scheme: light) {
+  .active{
+    font-weight: bold;
+    background-color: #e7e7e7;
+  }
+
+}
+@media (prefers-color-scheme: dark) {
+  .active{
+    font-weight: bold;
+    background-color: #1f1f1f;
+  }
+
+}
+#headerNav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  a{
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 6px;
+    width: 100%;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 20px;
+  }
+}
