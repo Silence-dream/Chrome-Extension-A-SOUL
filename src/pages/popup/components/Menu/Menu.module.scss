@@ -1,0 +1,43 @@
+// 根据用户电脑主题设置颜色
+@media (prefers-color-scheme: light) {
+
+  .ul-box {
+    .item {
+      border-color: transparent !important;
+      background-color: #e7e7e7 !important;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .active {
+    font-weight: bold;
+    background-color: #1f1f1f;
+  }
+  .ul-box {
+    .item {
+      border-color: transparent !important;
+      background-color: #171717 !important;
+    }
+  }
+}
+
+.ul-box {
+  display: block;
+
+  .item {
+    display: block;
+    margin: 0px auto 4px;
+    width: calc(100% - 7px);
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 1px solid #F5F5F5;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 300ms ease 0s, color 30ms ease 0s, border-color 300ms ease 0s;
+    user-select: none;
+  }
+}

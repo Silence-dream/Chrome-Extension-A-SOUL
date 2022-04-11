@@ -7,12 +7,11 @@ import App from '../App';
 
 const routes: RouteObject[] = [
   {
-    path: '/popup.html',
+    path: '/',
     element: <App />,
     children: [
       {
         index: true,
-        path: '/popup.html',
         element: <Home />,
       },
       {
@@ -22,6 +21,10 @@ const routes: RouteObject[] = [
       {
         path: 'live',
         element: <div>直播</div>,
+      },
+      {
+        path: '*',
+        element: <div>404</div>,
       },
     ],
   },
