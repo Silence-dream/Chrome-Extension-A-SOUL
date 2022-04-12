@@ -1,0 +1,54 @@
+@media (prefers-color-scheme: light) {
+  :global(#footerNav) {
+    background-color: #e6e6e6 !important;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :global(#footerNav) {
+    background-color: #141414 !important;
+  }
+}
+
+:global(#footerNav) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 30px;
+  z-index: 999;
+  background-color: #141414;
+}
+
+// 设置
+.setting {
+  position: relative;
+  display: inline-block;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  &>button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}
+
+// 头像
+.portrait {
+  position: relative;
+  float: right;
+  bottom: 4px;
+  margin-bottom: -26px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}

@@ -39,5 +39,18 @@
     cursor: pointer;
     transition: background-color 300ms ease 0s, color 30ms ease 0s, border-color 300ms ease 0s;
     user-select: none;
+    a{
+      display: block;
+      width: 100%;
+    }
+    span{
+      // 省略号
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 0 2px;
+    }
   }
 }
