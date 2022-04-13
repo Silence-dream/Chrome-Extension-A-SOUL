@@ -44,8 +44,11 @@
 #pio-container:active {
   cursor: grabbing;
 }
+
 #pio-container .pio-dialog {
-  right: 10%;
+  position:absolute;
+  left: 2rem;
+  width:3rem;
   line-height: 1.5;
   background: rgba(255, 255, 255, 0.9);
 }
@@ -85,13 +88,26 @@
   const Jsdelivr_Npm_Name = "live2d-diana@1.2.0"
 
   // 用到的库
-  const LIBS = [
+
+/*
+    const LIBS = [
     `https://cdn.jsdelivr.net/gh/${Jsdelivr_User_Name}/blog-img@94eb7e2/live2d/lib/pio.css`,
     `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/TweenLite.js`,
     `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/live2d-cubism-core.min.js`,    `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/pixi.min.js`,
     `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/cubism4.min.js`,
     `https://cdn.jsdelivr.net/gh/${Jsdelivr_User_Name}/blog-img@94eb7e2/live2d/lib/pio_sdk4.js`,
     `https://cdn.jsdelivr.net/gh/${Jsdelivr_User_Name}/blog-img@94eb7e2/live2d/lib/pio.js`
+  ]
+*/
+
+    // live2d 用到的库
+    const LIBS = [
+    `/blog-img/live2d/lib/pio.css`,
+    `/blog-img/live2d/lib/pio_sdk4.js`,
+    `/blog-img/live2d/lib/pio.js`,
+    `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/TweenLite.js`,
+    `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/live2d-cubism-core.min.js`,    `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/pixi.min.js`,
+    `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/cubism4.min.js`,
   ]
 
   const reqArr = LIBS.map(src => loadSource(src))
@@ -142,6 +158,7 @@
   let pio_reference // pio实例
 
   function 加载圣·嘉然() {
+
     pio_reference = new Paul_Pio(initConfig)
 
     pio_alignment = "right" // 右下角
@@ -354,7 +371,7 @@
   }
 
   // 加载js或css，返回函数包裹的promise实例，用于顺序加载队列
-  function loadSource(src) {
+function loadSource(src) {
     return () => {
       return new Promise(function (resolve, reject) {
         const TYPE = src.split('.').pop()
@@ -389,6 +406,7 @@
       });
     }
   }
+
 
   // 添加css
   function addStyle(css) {
