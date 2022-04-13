@@ -1,9 +1,11 @@
 .App{
+  position: relative;
   display: flex;
+  height: 100vh;
   .left-box{
     width: 260px;
   }
   .right-box{
-    width: 60px;
+    width: 80px;
   }
 }

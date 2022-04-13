@@ -20,6 +20,8 @@ function App() {
       <div className="right-box">
         <Menu />
       </div>
+      {/* 底部工具栏 */}
+      {/*<FooterNav />*/}
     </div>
   );
 }
