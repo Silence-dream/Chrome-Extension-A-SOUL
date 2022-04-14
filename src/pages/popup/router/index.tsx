@@ -1,6 +1,7 @@
 import { RouteObject, useRoutes } from 'react-router-dom';
 
 import Home from '@/pages/popup/views/Home/Home';
+import Live from '@/pages/popup/views/Live/Live';
 import TimeLine from '@/pages/popup/views/TimeLine/TimeLine';
 
 import App from '../App';
@@ -20,7 +21,7 @@ const routes: RouteObject[] = [
       },
       {
         path: 'live',
-        element: <div>直播</div>,
+        element: <Live />,
       },
       {
         path: '*',

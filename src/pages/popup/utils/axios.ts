@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 
 const config = {
   baseURL: import.meta.env.MODE === 'development' ? undefined : 'http://api.bilibili.com',
@@ -11,7 +11,6 @@ const config = {
     'Content-Type': 'application/json;charset=utf-8',
   },
 };
-
 // 创建一个 axios 实例对象，用于配置项目应用相关请求
 const _axios = axios.create(config);
 export const _axiosBase = {
@@ -44,6 +43,6 @@ export function httpGet(url: string, params?: any) {
   });
 }
 
-export function httpPost(url: string, params?: any) {
-  return _axios.post(url, params);
+export function httpPost(url: string, params?: any, config?: AxiosRequestConfig<any>) {
+  return _axios.post(url, params, config);
 }

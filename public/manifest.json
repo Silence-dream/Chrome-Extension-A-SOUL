@@ -15,7 +15,10 @@
   "options_page": "./option.html",
   "permissions": [
     "storage",
-    "notifications"
+    "notifications",
+    "cookies",
+    "http://*/*",
+    "https://*/*"
   ],
   "content_scripts": [
     {
