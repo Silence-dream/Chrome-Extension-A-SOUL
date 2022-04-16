@@ -25,7 +25,7 @@ export function getLiveStatusList() {
 
 // 单接口获取直播间状态
 export function getLiveStatusList2() {
-  return httpPost('https://api.live.bilibili.com/room/v1/Room/get_status_info_by_uids', {
+  return httpGet('http://api.live.bilibili.com/room/v1/Room/get_status_info_by_uids', {
     uids: [672328094, 672346917, 672353429, 351609538, 672342685],
   });
 }
