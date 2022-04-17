@@ -89,26 +89,16 @@
 
   // 用到的库
 
-/*
     const LIBS = [
-    `https://cdn.jsdelivr.net/gh/${Jsdelivr_User_Name}/blog-img@94eb7e2/live2d/lib/pio.css`,
+    `https://cdn.jsdelivr.net/gh/${Jsdelivr_User_Name}/blog-img/live2d/lib/pio.css`,
     `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/TweenLite.js`,
     `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/live2d-cubism-core.min.js`,    `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/pixi.min.js`,
     `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/cubism4.min.js`,
-    `https://cdn.jsdelivr.net/gh/${Jsdelivr_User_Name}/blog-img@94eb7e2/live2d/lib/pio_sdk4.js`,
-    `https://cdn.jsdelivr.net/gh/${Jsdelivr_User_Name}/blog-img@94eb7e2/live2d/lib/pio.js`
+    `https://cdn.jsdelivr.net/gh/${Jsdelivr_User_Name}/blog-img@0c65a96/live2d/lib/pio_sdk4.js`,
+    `https://cdn.jsdelivr.net/gh/${Jsdelivr_User_Name}/blog-img@0450463/live2d/lib/pio.js`
   ]
-*/
 
-    // live2d 用到的库
-    const LIBS = [
-    `/blog-img/live2d/lib/pio.css`,
-    `/blog-img/live2d/lib/pio_sdk4.js`,
-    `/blog-img/live2d/lib/pio.js`,
-    `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/TweenLite.js`,
-    `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/live2d-cubism-core.min.js`,    `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/pixi.min.js`,
-    `https://cdn.jsdelivr.net/npm/${Jsdelivr_Npm_Name}/live2d/Diana/cubism4.min.js`,
-  ]
+
 
   const reqArr = LIBS.map(src => loadSource(src))
 
@@ -162,6 +152,8 @@
     pio_reference = new Paul_Pio(initConfig)
 
     pio_alignment = "right" // 右下角
+
+
 
     const closeBtn = document.querySelector(".pio-container .pio-action .pio-close")
     closeBtn.insertAdjacentHTML('beforebegin', '<span class="pio-top"></span>')
