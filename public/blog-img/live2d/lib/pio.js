@@ -187,6 +187,7 @@ var Paul_Pio = function (prop) {
             elements.close.onclick = function () {
                 var pio_action = document.getElementsByClassName("pio-action")[0];
                 pio_action.style.display = "none";
+                localStorage.removeItem('posterGirl');
                 modules.destroy();
             };
             elements.close.onmouseover = function () {

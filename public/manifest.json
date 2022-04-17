@@ -15,7 +15,10 @@
   "options_page": "./option.html",
   "permissions": [
     "storage",
-    "notifications"
+    "notifications",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
   ],
   "content_scripts": [
     {
@@ -23,10 +26,13 @@
         "<all_urls>"
       ],
       "js": [
-        "/assets/js/a-soul.js"
+        "/assets/js/load.js"
       ],
       "run_at": "document_end"
     }
   ],
-  "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net; object-src 'self'"
+  "web_accessible_resources": [
+    "/assets/js/a-soul.js",
+    "/assets/js/move.js"
+  ]
 }
