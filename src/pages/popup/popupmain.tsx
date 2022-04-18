@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 
 import AppRoute from '@/pages/popup/router';
-console.log(import.meta.env);
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
