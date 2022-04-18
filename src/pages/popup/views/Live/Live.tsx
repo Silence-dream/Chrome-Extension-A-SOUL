@@ -1,44 +1,52 @@
+import * as _ from 'lodash-es';
 import { useEffect, useState } from 'react';
 
-import { getLiveStatusList, getLiveStatusList2 } from '@/pages/popup/api/bilibiliApi';
+import { getLiveStatusList } from '@/pages/popup/api/bilibiliApi';
 
 import styles from './Live.module.scss';
+
 export default function Live() {
   // 直播信息
   const [liveStatusList, setLiveStatusList] = useState<any[]>([]);
   useEffect(() => {
+    // 获取直播信息
     getLiveStatusList().then((res) => {
-      let liveList: any[] = [];
-      res.forEach((item) => {
-        // setLiveStatusList((liveStatusList) => [...liveStatusList, item.data.data]);
-        liveList.push(item.data.data);
-      });
-      setLiveStatusList(liveList);
-    });
-    // test
-    getLiveStatusList2().then((res) => {
-      // BUG csrf 校验错误 退出b站账号即可登录
-      console.log(res.data);
+      console.log(_.toArray(res.data.data));
+      setLiveStatusList(_.toArray(res.data.data));
     });
   }, []);
-  console.log(liveStatusList);
+
+  function openLive(room_id: number) {
+    window.open(`https://live.bilibili.com/${room_id}`);
+  }
+
   return (
     <div id="live">
       <ul className={styles['live-box']}>
-        <li className={styles.item}>
-          <div className={styles['left-box']}>
-            <div className={styles.avatar}>
-              <img
-                src="https://i0.hdslb.com/bfs/face/566078c52b408571d8ae5e3bcdf57b2283024c27.jpg"
-                alt="图片失效了"
-              />
+        {liveStatusList.map((item: any) => (
+          // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
+          <li
+            className={styles.item}
+            key={item.uid}
+            onClick={() => openLive(item.room_id)}
+          >
+            <div className={styles['left-box']}>
+              <div className={styles.avatar}>
+                <img src={item.face} alt="图片失效了" />
+              </div>
             </div>
-          </div>
-          <div className={styles['right-box']}>
-            <div className="username">这里是up主的名称</div>
-            <div className="introduction">这里是简介</div>
-          </div>
-        </li>
+            <div className={styles['right-box']}>
+              <div className="username">{item.uname}</div>
+              <div className="introduction">{item.title}</div>
+              {/*  是否直播*/}
+              {item.live_status == 1 ? (
+                <div className={styles['is-live']}>直播中...</div>
+              ) : (
+                <div className={styles['is-live']}>未开播...</div>
+              )}
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
   );
