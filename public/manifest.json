@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "A-SOUL",
   "version": "1.0.0",
-  "description": "测试描述",
+  "description": "一款可以让你随时查看然然的插件",
   "icons": {
     "16": "./assets/icon/icon16.png",
     "48": "./assets/icon/icon48.png",
