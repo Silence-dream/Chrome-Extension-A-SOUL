@@ -15,7 +15,7 @@
     injectCustomJs('/assets/js/a-soul.js',function(){
 
       injectCustomJs('/assets/js/move.js',function(){
-
+          console.log(11111111111111111111111)
       });
    });
 }()
