@@ -17,6 +17,7 @@
     "storage",
     "notifications",
     "tabs",
+    "activeTab",
     "cookies",
     "http://*/*",
     "https://*/*"
