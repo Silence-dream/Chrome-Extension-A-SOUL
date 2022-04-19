@@ -38,6 +38,10 @@
   transition: transform 0.3s;
   cursor: grab;
 }
+#pio-container{
+  width:200px !important;
+  height:300px !important;
+}
 #pio-container:hover {
   transform: translateY(-0.3rem);
 }
@@ -48,9 +52,10 @@
 #pio-container .pio-dialog {
   position:absolute;
   left: 2rem;
-  width:3rem;
+  width:6rem !important;
   line-height: 1.5;
   background: rgba(255, 255, 255, 0.9);
+  z-index:999;
 }
 #pio {
   height: 240px;
