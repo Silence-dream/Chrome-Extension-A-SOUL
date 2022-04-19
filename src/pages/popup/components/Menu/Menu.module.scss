@@ -39,6 +39,9 @@
     cursor: pointer;
     transition: background-color 300ms ease 0s, color 30ms ease 0s, border-color 300ms ease 0s;
     user-select: none;
+    &:hover{
+      background-color: #f995be !important;
+    }
     a{
       display: block;
       width: 100%;
