@@ -1,9 +1,4 @@
-// // 官方动态
-// export const ASOULDYNAMICHISTORY =
-//   'https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?visitor_uid=28114094&host_uid=703007996&need_top=1&platform=web';
-
 // 获取直播间状态
-
 import { httpGet } from '@/pages/popup/utils/axios';
 
 // 获取单个直播间的状态
@@ -21,4 +16,17 @@ export function getLiveStatusList() {
 // 获取主播信息
 export function getAnchorInfo(uid: number | string) {
   return httpGet(`http://api.live.bilibili.com/live_user/v1/Master/info?uid=${uid}`);
+}
+
+// 获取二创推荐
+export function getRecomend(page: number = 1) {
+  return httpGet('https://api.asoul.cloud:8000/getBV', {
+    page: page,
+    tag_id: 0,
+    sort: 4,
+    part: 0,
+    rank: 0,
+    ctime: 0,
+    type: 1,
+  });
 }
