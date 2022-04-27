@@ -13,6 +13,20 @@ yarn;yarn build
 # 点击加载已解压的扩展程序选择 dist 文件夹即可成功载入
 ```
 
+## 介绍
+
+项目界面
+
+![image-20220427200938441](https://cdn.jsdelivr.net/gh/Silence-dream/bed@master/img/202204272009219.png)
+
+Chrome 桌宠
+
+![image-20220427201012326](https://cdn.jsdelivr.net/gh/Silence-dream/bed@master/img/202204272010816.png)
+
+动图演示
+
+![a-soula](https://cdn.jsdelivr.net/gh/Silence-dream/bed@master/img/202204272013417.gif)
+
 ## 开发人员
 
 人物模型：(jokereven)[https://github.com/jokereven]
