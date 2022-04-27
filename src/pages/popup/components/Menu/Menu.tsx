@@ -24,6 +24,10 @@ let menuList = [
     name: '乃琳',
     link: 'https://space.bilibili.com/672342685',
   },
+  {
+    name: '导航站',
+    link: 'https://www.asoulworld.com',
+  },
 ];
 export default function Menu() {
   return (
