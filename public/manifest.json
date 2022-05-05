@@ -12,7 +12,6 @@
     "default_icon": "./assets/icon/icon16.png",
     "default_popup": "./popup.html"
   },
-  "options_page": "./option.html",
   "permissions": [
     "storage",
     "notifications",
